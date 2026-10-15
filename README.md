@@ -1,106 +1,42 @@
 # Quadrix
 
-Um clone moderno de Tetris construído com Python e Pygame.
+## Objetivo
 
-## Sobre
+Um clone moderno de Tetris em Python com Pygame, oferecendo múltiplos modos de jogo, sistema de conquistas, recordes por modo e efeitos visuais de partículas.
 
-Quadrix é um jogo de Tetris completo com múltiplos modos de jogo, sistema de conquistas, recordes por modo, partículas visuais, peça fantasma, lock delay, soft drop, hold (peça segurada), 7-bag randomizer e wall kicks.
+## Funcionalidades
 
-Desenvolvido em português do Brasil.
+- 6 modos de jogo: Clássico, Maratona, Sprint, Ultra, Blitz e Practice
+- Sistema de conquistas com desbloqueio e alerta visual
+- Recordes salvos por modo de jogo em `quadrix_progresso.json`
+- Peça fantasma mostrando onde a peça atual irá cair
+- Lock delay, soft drop, hard drop e hold (peça segurada)
+- Visualização das próximas 5 peças e da peça segurada
+- Efeitos de partículas ao limpar linhas e fixar peças
+- Wall kicks para rotação próxima às paredes
+- Interface moderna com menus, pausar e tela de fim de jogo
 
-## Modos de jogo
+## Tecnologias utilizadas
 
-| Modo | Descrição |
-|------|-----------|
-| **Clássico** | Tetris tradicional. Jogue até não haver mais espaço. |
-| **Maratona** | Jogo contínuo sem fim. A velocidade aumenta gradualmente. |
-| **Sprint** | Limpe 40 linhas o mais rápido possível. |
-| **Ultra** | Jogue por 2 minutos e maximize sua pontuação. |
-| **Blitz** | Velocidade muito rápida desde o início. |
-| **Practice** | Modo treino. Sem game over. |
+- Python 3.x
+- Pygame 2.6.1
 
-## Como jogar
+## Como executar
 
-### Controles
-
-| Tecla | Ação |
-|-------|------|
-| ← / → | Mover a peça |
-| ↓ | Soft drop (queda mais rápida) |
-| ↑ | Rotacionar a peça (com wall kicks) |
-| Espaço | Queda rápida (hard drop) |
-| C | Segurar / trocar peça (hold) |
-| P / ESC | Pausar |
-| R (Recordes/Conquistas) | Resetar recordes ou conquistas |
-
-### Telas de menu
-
-- **Menu principal**: JOGAR, INSTRUÇÕES, RECORDES, CONQUISTAS, OPÇÕES, SAIR
-- **Seleção de modo**: Escolha entre os 6 modos de jogo
-- **Explicação do modo**: Descrição do modo selecionado antes de iniciar
-
-## Instalação
+1. Clone o repositório
+2. Instale as dependências
+3. Execute o arquivo principal
 
 ```bash
-# Clone o repositório
-git clone https://github.com/seu-usuario/quadrix.git
-cd quadrix
-
-# Crie um ambiente virtual (opcional, recomendado)
-python -m venv .venv
-.venv\Scripts\activate  # Windows
-# ou
-source .venv/bin/activate  # Linux/macOS
-
-# Instale as dependências
 pip install -r requirements.txt
-
-# Execute o jogo
 python -m quadrix
 ```
 
-Ou instale como pacote:
+## Integrantes
 
-```bash
-pip install .
-quadrix
-```
+- Quadrix
 
-## Estrutura do projeto
+## Observações
 
-```
-quadrix/
-├── __init__.py        # Pacote + versão
-├── __main__.py        # Entrada: python -m quadrix
-├── main.py            # Loop principal, estado do jogo, Tetris
-├── config.py          # Constantes, cores, configurações de modo
-├── states.py          # Constantes de estados do jogo
-├── tetrominoes.py     # Formas das peças, wall kicks
-├── particles.py       # Sistema de partículas
-├── save.py            # Salvamento/carregamento de progresso
-└── renderer.py        # Toda a renderização (desenhar_*)
-assets/
-└── images/
-    └── icon.png       # Ícone da janela
-tests/
-└── test_*.py          # Testes unitários
-quadrix_progresso.json # Progresso salvo (conquistas + recordes)
-pyproject.toml
-requirements.txt
-README.md
-LICENSE
-```
-
-## Desenvolvimento
-
-```bash
-# Instalar dependências de desenvolvimento
-pip install -e .
-
-# Executar testes
-python -m pytest tests/  # ou python -m unittest discover tests
-
-# Verificar estilo
-python -m py_compile quadrix/*.py
-```
-
+- O arquivo de progresso `quadrix_progresso.json` é criado automaticamente na raiz do projeto.
+- O ícone da janela é opcional: se `assets/images/icon.png` não estiver presente, o jogo continua funcionando normalmente.
