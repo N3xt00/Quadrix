@@ -34,7 +34,7 @@ python -m quadrix
 
 ## Integrantes
 
-- Quadrix
+- Giovanni Martins
 
 ## Observações
 
