@@ -343,7 +343,7 @@ WALL_KICKS = {
 # Configuração da janela do jogo
 janela = pygame.display.set_mode((LARGURA_JANELA, ALTURA_JANELA))
 pygame.display.set_caption('Quadrix')
-icone = pygame.image.load(r'C:\Users\gigam\AppData\Local\Temp\claude\c--Users-gigam-AppData-Local-Claude-3p-local-agent-mode-sessions-6325c982-00000000-6ad9c93c-outputs\d7e7b685-683c-4117-9412-fa25224f8103\images\2.png')
+icone = pygame.image.load(r'.\assets\images\icon.png')
 pygame.display.set_icon(icone)
 relogio = pygame.time.Clock()
 
